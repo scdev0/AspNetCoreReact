@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <RootNamespace>API_Auth0</RootNamespace>
+    <RootNamespace>APIAuth0</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

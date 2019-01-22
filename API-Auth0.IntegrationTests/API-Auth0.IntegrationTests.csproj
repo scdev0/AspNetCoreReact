@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RootNamespace>API_Auth0.UnitTests</RootNamespace>
+    <RootNamespace>APIAuth0.IntegrationTests</RootNamespace>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>

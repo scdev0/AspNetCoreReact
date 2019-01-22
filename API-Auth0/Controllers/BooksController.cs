@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using APIAuth0.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -19,13 +20,6 @@ namespace APIAuth0.Controllers
             };
 
             return resultBookList;
-        }
-
-        public class Book
-        {
-            public string Author { get; set; }
-            public string Title { get; set; }
-            public bool AgeRestriction { get; set; }
         }
     }
 }
