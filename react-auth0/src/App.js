@@ -12,17 +12,16 @@ class App extends Component {
 	}
 
 	renderHome() {
+		// resultComponent only goes into <Home> on return
 		let resultComponent = <Home auth={this.authService} />;
 
 		if (!this.authService.isAuthenticated()) {
-			this.authService.login();
 			resultComponent = (
 				<div>
-					<p>Redirecting to the authentication service...</p>
+					<p>Login to see the books...</p>
 				</div>
 			);
 		}
-
 		return resultComponent;
 	}
 
@@ -36,11 +35,15 @@ class App extends Component {
 	}
 
 	render() {
+		const loginButton = <button onClick={() => this.authService.login()}>Login</button>;
+		const logoutButton = <button onClick={() => this.authService.logout()}>Logout</button>;
+
 		return (
 			<div className="App">
 				<header className="App-header">
 					<img src={logo} className="App-logo" alt="logo" />
 					<p>My Bookstore</p>
+					{this.authService.isAuthenticated() ? logoutButton : loginButton}
 				</header>
 				<Switch>
 					<Route exact path="/" render={() => this.renderHome()} />

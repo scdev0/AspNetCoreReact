@@ -17,7 +17,7 @@ class Home extends React.Component {
 			})
 		})
 			.then((response) => response.json())
-			.then((books) => this.setState({ bookList: books }))
+			.then((books) => this.setState({ bookList: books })) // triggers render()
 			.catch((error) => console.log(error));
 	}
 
