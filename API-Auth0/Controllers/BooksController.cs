@@ -7,7 +7,7 @@ namespace APIAuth0.Controllers
     [Route("api/[controller]")]
     public class BooksController : Controller
     {
-        [HttpGet]
+        [HttpGet, Authorize]
         public IEnumerable<Book> Get()
         {
             var currentUser = HttpContext.User;
